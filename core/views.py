@@ -1,8 +1,13 @@
 from multiprocessing import context
 from django.shortcuts import redirect, render
-from .models import Task
+from .models import Task, Settings
 from .forms import TaskForm
 
+
+def settings(request):
+    return{
+        'settings': Settings.objects.all()
+    }
 
 def taskView(request):
     tasks = Task.objects.order_by("completed", "-created")

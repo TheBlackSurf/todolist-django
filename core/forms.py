@@ -10,7 +10,6 @@ class TaskForm(forms.ModelForm):
         'placeholder': 'Dodaj nowe zadanie...',
     }))
 
-
     class Meta:
         model = Task
         fields = ('title', 'completed')
