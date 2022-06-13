@@ -8,4 +8,6 @@ admin.site.register(Task)
 class SettingsAdmin(admin.ModelAdmin):
     '''Admin View for Settings'''
 
-    list_display = ('title',)
+    list_display = ('title', 'hcode', 'fcode', 'styles')
+
+    

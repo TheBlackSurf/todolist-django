@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% for s in settings  %}
+        <title>{{s.title}}</title>
+        {{s.hcode|safe}}
+    
+</head>
+<style>
+    {{s.styles|safe}}
+body{
+    background-color:
+}
+</style>
+{% endfor %}
+<body class="dark:bg-gray-800">
+
+    {% block content %}{% endblock content %}
+
+
+</body>
+{% for s in settings  %}
+   {{s.fcode|safe}}
+{% endfor %}
+
+</html>
