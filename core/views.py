@@ -6,7 +6,6 @@ from .forms import TaskForm
 
 def taskView(request):
     tasks = Task.objects.order_by("completed", "-created")
-    # tasks = Task.objects.order_by("-created")
     form = TaskForm()
     if request.method == 'POST':
         form = TaskForm(request.POST)
